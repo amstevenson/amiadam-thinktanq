@@ -1,13 +1,6 @@
-# file-frontend
+# am-i-adam
 
-A micro-service that acts as a frontend for functionality revolving around uploading files to Google Drive. Both this
-service and file-api need to be running in order to achieve this.
-
-If you are going to make use of this project, you will need to follow the steps related to setting up a Google Drive Api
-project (https://developers.google.com/drive/v3/web/quickstart/python). The secret file will need to be placed in the
-main directory of file-api.
-
-Refer to file-api's readme for more information about this.
+TODO
 
 ## Running
 
