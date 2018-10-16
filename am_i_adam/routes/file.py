@@ -30,3 +30,19 @@ def send_file():
                  "file_type of: {} ".format(file_name, file_type))
 
     return render_template("processing.html", file=uploaded_file)
+
+
+@file.route("/match", methods=["GET"])
+def match():
+    # Detect what boxes were set in the html index template.
+    logger.info("Processed result is a match")
+
+    return render_template("match.html")
+
+
+@file.route("/no-match", methods=["GET"])
+def no_match():
+    # Detect what boxes were set in the html index template.
+    logger.info("Processed result is a no-match")
+
+    return render_template("no-match.html")
