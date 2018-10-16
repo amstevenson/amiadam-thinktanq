@@ -30,7 +30,7 @@
                     <form method="post" action="{{ url_for('file.send_file') }}" id="contact-form" enctype='multipart/form-data'>
                         <div class="form-group">
                             <label for="file" class="sr-only">File</label>
-                            <input type="file" class="form-control input-lg text-center" name="file" id="file" >
+                            <input type="file" class="form-control input-lg text-center" name="file" id="file" accept=".png, .jpg">
                         </div>
 
                         <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send">
