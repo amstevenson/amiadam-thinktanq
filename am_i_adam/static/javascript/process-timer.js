@@ -17,17 +17,17 @@ window.setTimeout(function() {
      data: {
        // empty for now
      },
-     url: 'match',
-     timeout: interval * maxTries, // Make it wait for the full duration
-     success: function (data) {
-       if (data.error) {
-         window.location = data.redirect
-       }
-     }
+     //url: 'match',
+     //timeout: interval * maxTries, // Make it wait for the full duration
+     //success: function (data) {
+     //  if (data.error) {
+     //    window.location.href = "match"
+     //  }
+     //}
    })
 
    // Function to check the status of the request periodically
-   function checkDeedIsSigned () {
+   function getProcessingResult () {
      count++
 
      // Call our checking endpoint via ajax
@@ -35,27 +35,27 @@ window.setTimeout(function() {
        dataType: 'json',
        method: 'GET',
        cache: false,
-       url: 'confirm-mortgage-is-signed',
-       success: function (data) {
+       // url: 'get-processing-result',
+       //success: function (data) {
          // If it's ready, redirect, otherwise go round again
-         if (data.result) {
-           window.location = data.redirect
-         }
+       //  if (data.result) {
+           window.location.href = 'match'
+       //  }
          // If error occurs redirect to error page
-         if (data.error) {
-           window.location = data.redirect
-         }
-       }
+       //  if (data.error) {
+       //    window.location = data.redirect
+       //  }
+       //}
      })
 
      if (count < maxTries) {
        setTimeout(checkDeedIsSigned, interval)
      } else {
-       window.location = 'service-unavailable/deed-not-confirmed'
+       window.location.href = 'no-match'
      }
    }
 
    // Every 5 seconds check again
-   setTimeout(checkDeedIsSigned, interval)
+   setTimeout(getProcessingResult, interval)
  })(window.jQuery)
 */
