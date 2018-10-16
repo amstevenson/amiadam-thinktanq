@@ -1,24 +1,6 @@
 {% include "includes/header.html" %}
 
-{% block page_title %} File Uploader - index {% endblock %}
-
 {% block content %}
-
-<aside id="header-image" style="background-image: url(static/main1.jpg);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="header-image-wrap">
-                    <div class="header-image-intro">
-                        <h1>Processing</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</aside>
-
-<div id="main">
 
     <section id="feature">
         <div class="container">
@@ -26,7 +8,7 @@
                 <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-2 text-center" >
                     <h2 class="uppercase-heading-fm">Processing</h2>
                     <div class="spacer spacer-xs"></div>
-                    <img src="static/main4.jpg" class="center" style="width: 500px;">
+                    <img src="static/thinking.jpg" class="center" style="width: 500px;">
                     <div class="spacer spacer-xs"></div>
                     <div class="progress" style="width:500px">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70"
@@ -38,8 +20,6 @@
             </div>
         </div>
     </section>
-
-</div>
 
 <script type=text/javascript src="{{ url_for('static', filename='javascript/process-timer.js') }}"> </script>
 

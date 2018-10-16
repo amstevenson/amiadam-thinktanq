@@ -29,6 +29,8 @@ def send_file():
     logger.debug("(Before authentication) Sending to Face Recognition with: file name of: {} , "
                  "file_type of: {} ".format(file_name, file_type))
 
+    # Send post request to processing endpoint
+
     return render_template("processing.html", file=uploaded_file)
 
 
