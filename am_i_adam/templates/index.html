@@ -1,0 +1,56 @@
+{% include "includes/header.html" %}
+
+{% block page_title %} File Uploader - index {% endblock %}
+
+{% block content %}
+
+<aside id="header-image" style="background-image: url(static/main1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="header-image-wrap">
+                    <div class="header-image-intro">
+                        <h1>Am I Adam?</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<div id="main">
+
+    <section id="feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-2 text-center" >
+                    <h2 class="uppercase-heading-fm">Are you Adam? Haven't you always wanted to know?</h2>
+                    <p id="contact_return_message">Upload your image. Make sure you choose a picture with your face on it.</p>
+                    <div class="spacer spacer-xs"></div>
+                    <form method="post" action="{{ url_for('file.send_file') }}" id="contact-form" enctype='multipart/form-data'>
+                        <div class="form-group">
+                            <label for="file" class="sr-only">File</label>
+                            <input type="file" class="form-control input-lg text-center" name="file" id="file" >
+                        </div>
+
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="spacer spacer-md"></div>
+        <div class="container">
+            <h2 class="uppercase-heading-fm text-center">Get in touch</h2>
+            <div class="col-md-8 col-md-offset-2 text-center lead-wrap">
+                <p> Feel free to get in touch with me about this. Send queries to addstevenson@hotmail.com </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+
+{% include "includes/footer.html" %}
